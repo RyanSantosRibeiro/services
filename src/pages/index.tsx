@@ -24,6 +24,7 @@ const Home: React.FC = () => {
       <ThemeProvider theme={theme2}>
         <h1>Hello world</h1>
         <Logo />
+        
         <Banner />
       </ThemeProvider>
     </Container>
