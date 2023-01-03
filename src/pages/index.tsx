@@ -2,8 +2,13 @@ import React from "react";
 
 import Head from 'next/head';
 
+import theme from "../styles/theme";
+import theme2 from "../styles/theme2";
+
 import Logo from '../assets/logo.svg';
 import { Container } from "../styles/Pages/home";
+import Banner from "../components/Banner";
+import { ThemeProvider } from "styled-components";
 
 
 
@@ -16,10 +21,11 @@ const Home: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main>
+      <ThemeProvider theme={theme2}>
         <h1>Hello world</h1>
         <Logo />
-      </main>
+        <Banner />
+      </ThemeProvider>
     </Container>
   )
 }
